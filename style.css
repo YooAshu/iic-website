@@ -104,9 +104,27 @@ box-shadow:  5px 5px 8px #9c9da2,
   padding: 0 20px;
   font-family: 'Josefin Sans', sans-serif;
 }
-.sec2-part1-text div:nth-child(1){
+.sec2-part1-text a {
+  text-decoration:none;
+  color:black;
+font-size: 18px;
+
+
+}
+.sec2-part2-text a {
+  text-decoration:none;
+  color:black;
+font-size: 18px;
+}
+.aboutiic {
   font-size: 35px;
 }
+
+
+.ourteam {
+  font-size: 35px;
+}
+
 .sec2-part1-text div:nth-child(2){
   font-size: 18px;
     line-height: 24px;
@@ -158,9 +176,7 @@ background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
 box-shadow:  5px 5px 8px #9c9da2,
              -5px -5px 8px #ffffff;
 }
-.sec2-part2-text div:nth-child(1){
-  font-size: 35px;
-}
+
 .sec2-part2-text div:nth-child(2){
   font-size: 18px;
     line-height: 24px;
