@@ -1,0 +1,227 @@
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #e6e7ee;
+  padding: 40px;
+  z-index: -1;
+  position: relative;
+}
+.main{
+  border-radius: 26px;
+background: #e6e7ee;
+box-shadow:  6px 6px 12px #656565,
+             -6px -6px 12px #ffffff;
+ 
+ padding: 20px;
+  min-height: 100vh;
+  display: grid;
+  position: relative;
+  overflow:hidden;
+}
+#particles-js{
+  min-height: 100vh;
+  z-index: -2;
+}
+canvas{
+position: fixed;
+  width: calc(100vw - 140px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+}
+.ham-menu{
+  z-index: 1;
+}
+#sec1{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  z-index: 1;
+  position: relative;
+  
+  
+}
+.director{
+    height: 70vh;
+    margin: 150px 0 ;
+    display: grid;
+}
+.faculty{
+    min-height: 100vh;
+    margin-bottom: 150px ;
+    display: grid;
+}
+.title1{
+  font-size: 50px;
+    position: absolute;
+    justify-self: center;
+   font-family: 'Righteous', cursive;
+  background: -o-linear-gradient(45deg ,#25006a,#8c3cdf);
+    background: linear-gradient(45deg ,#25006a,#8c3cdf);
+    -webkit-background-clip: text;
+    margin-bottom: 25px;
+    -webkit-text-fill-color: transparent;
+}
+.title1::after{
+content: "";
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, #e6e7ee 0%, rgb(119 119 255) 53%);
+    width: 30%;
+    height: 27px;
+    display: inherit;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: white;
+}
+.card
+{
+   position: relative;
+   width: 340px;
+   height: 450px;
+  border-radius: 10px;
+background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+box-shadow:  5px 5px 8px #9c9da2,
+             -5px -5px 8px #ffffff;
+   overflow: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+   margin: 20px;
+  
+}
+.card .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card .circle
+{
+   position: absolute;
+   top: -190px;
+   left: 50%;
+   width: 500px;
+   height: 500px;
+   transform: translateX(-50%);
+   clip-path: circle();
+}
+.card .circle::before
+{
+   content: '';
+   position: absolute;
+   top: -8px;
+   left: -16px;
+   width: 100%;
+   height: 100%;
+   box-shadow: 0 0 0 20px rgb(12 0 181);
+   border-radius: 50%;
+   z-index: 2;
+   pointer-events: none;
+}
+.card2 .circle .imgBox {
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 310px;
+}
+.imgBox img
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s;
+}
+.imgBox img:hover
+{
+   transform: scale(1.2);
+}
+.dir-img{
+  display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  margin-top: 100px;
+}
+.card3{
+  margin: 100px 50px ;
+}
+/* 420px */
+@media screen and (max-width:470px){
+  body{
+    padding: 15px;
+  }
+  .main{
+    padding: 10px;
+  }
+  
+  .header{
+    height: 7vh !important;
+    width: calc(100% - 50px) !important;
+    justify-content: space-between !important;
+    margin: 0 !important;
+  } 
+  .header.sticky{
+    height: 6vh !important;
+    margin: 0 !important;
+  }
+  .iic-top-left{
+    margin: 0 !important;
+  }
+  .iic-sticky{
+    margin: 10px !important;
+  }
+  .top-right{
+    margin-right: 0 !important;
+    width: unset !important;
+  }
+  .moon{
+    font-size: 30px !important;
+  }
+  .moon.moon-sticky{
+    font-size: 25px !important;
+  }
+  .ham-menu{
+    right: -60vw !important;
+     width: 60vw !important;
+    z-index: 3;
+    margin: 7vh 0 40px 0 !important;
+  }
+  .ham-menu.ham-menu-active{
+    right:15px !important;
+     width: 60vw !important;
+    z-index: 3;
+    margin: 7vh 0 40px 0 !important;
+  }
+  .director{
+    height: max-content;
+    width: max-content;
+  }
+  .dir-img{
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .card{
+    margin: 30px 0;
+  }
+  .card3{
+    margin: 30px 10px;
+  }
+  .faculty{
+    height: max-content;
+    width: max-content;
+  }
+}

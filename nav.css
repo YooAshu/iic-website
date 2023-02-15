@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.iic-top-left{
+  height: 90%;
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.iic-top-left img{
+ height: inherit;
+}
+.iic-top-left.iic-sticky{
+  height: 80%;
+}
+.header{
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  position: fixed;
+  width: calc(100% - 160px);
+  transition: width .6s , height .4s;
+  align-items: center;
+  
+}
+.header.header-active{
+  width: 70vw;
+  transition: width .6s , height .4s;
+}
+.header.sticky{
+  top: 10px;
+  z-index: 4;
+ border-radius: 10px;
+background: #e6e7ee;
+box-shadow:  11px 11px 9px #9c9da2,
+             -11px -11px 9px #ffffff;
+  height: 7vh;
+  transition: height .4s ,  width .6s;
+}
+.header.header-active.sticky{
+  width: 70vw;
+  transition: width .6s , height .4s;
+}
+
+.top-right{
+  display: flex;
+    margin-right: 40px;
+  justify-content: space-between;
+  width: 10vw;
+  position: relative;
+  right: 0;
+  transition: right .6s;
+  height: 100%;
+}
+.moon{
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: font-size .4s;
+}
+.moon.moon-sticky{
+  font-size: 30px;
+}
+
+
+.hamburger{
+  z-index: 3;
+  height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#000;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+
+.ham6 .top {
+  stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+.ham6.active .top {
+  stroke-dashoffset: -132px;
+}
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
+}
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
+}
+.ham-menu.ham-menu-active{
+     background-color: #e6e7ee;
+    height: -webkit-fill-available;
+    width: 18vw;
+    position: fixed;
+    right: 40px;
+    box-shadow: 8px 8px 16px #88888c, -8px -8px 16px #ffffff;
+    border-radius: 26px;
+    transition: right .6s;
+    box-sizing: content-box;
+    margin: -20px 0 40px 0;
+  display: flex;
+  align-items: center;
+}
+.ham-menu{
+     background-color: #e6e7ee;
+    height: -webkit-fill-available;
+    width: 18vw;
+    position: fixed;
+    right: -18vw;
+    box-shadow: 8px 8px 16px #88888c, -8px -8px 16px #ffffff;
+    border-radius: 26px;
+    transition: right .6s;
+    box-sizing: content-box;
+    margin: -20px 0 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.ham-items ul li{
+  list-style-type: none;
+    font-size: 26px;
+    padding: 7px 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    width: max-content;
+    margin: 15px 20px;
+  transition: color 1s;
+}
+.ham-items ul a{
+  text-decoration: none;
+  color: black;
+}
+.ham-items ul li:hover{
+  color: white;
+}
+.ham-items ul li::before{
+  position: absolute;
+  content: "";
+  background-color: #01015e;
+  height: 10px;
+  width: 10px;
+  top: 40%;
+  left: -15px;
+  border-radius: 50px;
+  transition: width 1s, height 1s, top 1s;
+  z-index: -1;
+}
+.ham-items ul li:hover::before{
+     z-index: -1;
+    width: calc(100% + 30px);
+    height: 100%;
+    top: 0;
+    left: -15px;
+  box-shadow: inset -2px -2px 6px rgb(85 84 115), inset -2px -2px 4px rgb(97 115 219), inset 2px 2px 2px rgb(219 204 204 / 22%), inset 2px 2px 4px rgb(93 94 205 / 67%);
+}
+.ham-items{
+  padding: 20px;
+  overflow: hidden;
+}
+.ham-items-active{
+   padding: 20px;
+  overflow: hidden;
+}
+/*preloader  */
+#preloader{
+  position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+#preloader img{
+  width: inherit;
+  height: inherit;
+
+}
+.foot{
+  background: black;
+    width: calc(100% + 40px);
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    margin: -20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  box-shadow: 0px -11px 15px #9c9da2;
+}
+.foot div:nth-child(2) i {
+  padding: 0 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.foot div:nth-child(2) i:hover{
+  font-size: 20px;
+  
+}
+.foot div:nth-child(2) a{
+  text-decoration: none;
+  color: white;
+}
