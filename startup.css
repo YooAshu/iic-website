@@ -232,4 +232,10 @@ position: fixed;
   .ham-menu.ham-menu-active{
     z-index: 4;
   }
+canvas{
+position: fixed;
+  width: calc(100vw - 50px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+  }
 }
