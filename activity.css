@@ -347,4 +347,10 @@ position: fixed;
     height: max-content;
     margin-bottom: 35px;
   }
+canvas{
+position: fixed;
+  width: calc(100vw - 50px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+  }
 }
