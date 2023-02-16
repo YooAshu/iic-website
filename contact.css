@@ -375,5 +375,10 @@ font-size: 20px;
   .con-box{
     width: 80%;
   }
-  
+  canvas{
+position: fixed;
+  width: calc(100vw - 50px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+  }
 }
