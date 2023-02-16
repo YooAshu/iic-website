@@ -360,4 +360,12 @@ box-shadow:  5px 5px 8px #9c9da2,
     grid-row-gap: 0;
   }
   .card{margin: 0;}
+
+canvas{
+position: fixed;
+  width: calc(100vw - 50px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+  }
 }
+
