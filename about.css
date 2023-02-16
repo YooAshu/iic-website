@@ -397,4 +397,10 @@ box-shadow:  5px 5px 8px #9c9da2,
   .sec5-cont img{
     width: 100%;
   }
+canvas{
+position: fixed;
+  width: calc(100vw - 50px) !important;
+  z-index: -1;
+  height: calc(100% - 100px) !important;
+  }
 }
